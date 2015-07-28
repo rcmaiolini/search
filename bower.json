@@ -8,8 +8,8 @@
   ],
   "dependencies": {
     "angular": "latest",
-    "angular-route": "latest",
     "requirejs": "latest",
-    "requirejs-domready": "latest"
+    "requirejs-domready": "latest",
+    "angular-ui-router": "~0.2.15"
   }
 }

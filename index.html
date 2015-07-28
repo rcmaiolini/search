@@ -1,22 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <base href="/"/>
   <meta charset="utf-8">
   <title>Search DEVV</title>
   <link rel="stylesheet" href="assets/sass/app.css">
 </head>
 <body>
 
-  <header>
+  <header ui-view="header" class="header"></header>
 
-  </header>
+  <div ui-view="content" class="content"></div>
 
-  <div data-ng-view></div>
-
-  <footer class="footer">
-      <a href="#/view1">view1</a>
-      <a href="#/view2">view2</a>
-  </footer>
+  <footer ui-view="footer" class="footer"></footer>
 
   <script src="lib/requirejs/require.js" data-main="js/main.js"></script>
 </body>

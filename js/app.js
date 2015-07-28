@@ -1,15 +1,12 @@
-define([
-    'angular',
-    'angular-route',
-    './controllers/index'
-], function (angular) {
+define(['angular',
+        'routes',
+        'controllers/index']
+  , function (ng) {
     'use strict';
 
-    return angular.module('app', [
-        'app.controllers',
-        'app.directives',
-        'app.filters',
-        'app.services',
-        'ngRoute'
-    ]);
+        return ng.module('app', [ 'app.controllers', 'app.route' ])
+                 .config(['$locationProvider'
+              , function($locationProvider){
+                $locationProvider.html5Mode(true);
+              }]);
 });

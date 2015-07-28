@@ -1,21 +1,22 @@
 require.config({
-
+    baseUrl: '/js/',
     paths: {
         'angular': '../lib/angular/angular',
-        'angular-route': '../lib/angular-route/angular-route',
-        'domReady': '../lib/requirejs-domready/domReady'
+        'angular-ui-router': '../lib/angular-ui-router/release/angular-ui-router',
+        'domReady': '../lib/requirejs-domready/domReady',
+        'bootstrap-app': './bootstrap'
     },
 
     shim: {
         'angular': {
             exports: 'angular'
         },
-        'angular-route': {
+        'angular-ui-route': {
             deps: ['angular']
         }
     },
 
-    deps: [
-        './bootstrap'
-    ]
+    priority: ['angular', 'angular-ui-route', 'bootstrap-app' ],
+
+    deps: ['bootstrap-app']
 });

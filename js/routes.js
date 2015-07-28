@@ -1,18 +1,39 @@
-define(['./app'], function (app) {
+define(['angular',
+    'angular-ui-router'], function (ng) {
     'use strict';
-    return app.config([function ($stateProvider) {
-        $stateProvider.when('/view1', {
-            templateUrl: 'partials/header.html',
-            controller: 'MyCtrl1'
-        })
 
-        $stateProvider.when('/view2', {
-            templateUrl: 'partials/footer.html',
-            controller: 'MyCtrl2'
-        });
+    return ng.module('app.route',['ui.router'])
+      .config(routeConfig);
 
-        $stateProvider.otherwise({
-            redirectTo: '/view1'
-        });
-    }]);
+    routeConfig.$inject = ['$stateProvider'];
+    function routeConfig($stateProvider) {
+        $stateProvider
+          .state('app', {
+              url: '/',
+              abstract: true,
+              views: {
+                  'header': {
+                      templateUrl: 'partials/header.html',
+                      controller: 'HeaderController',
+                      controllerAs: 'headerCtrl'
+                  },
+                  'footer': {
+                      templateUrl: 'partials/footer.html',
+                      controller: 'FooterController',
+                      controllerAs: 'footerCtrl'
+                  }
+
+              }
+          })
+          .state('app.index', {
+              url: '',
+              views: {
+                  'content@': {
+                      templateUrl: 'views/search/search.html',
+                      controller: 'SearchController',
+                      controllerAs: 'searchCtrl'
+                  }
+              }
+          })
+    };
 });
