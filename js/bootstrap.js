@@ -1,7 +1,7 @@
 define([
     'require',
     'angular',
-    '../../dist/js/app',
+    'app',
     'routes'
 ], function (require, ng) {
     'use strict';
