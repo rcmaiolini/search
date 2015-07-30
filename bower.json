@@ -10,6 +10,7 @@
     "angular": "latest",
     "requirejs": "latest",
     "requirejs-domready": "latest",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "latest",
+    "flexboxgrid": "~6.2.0"
   }
 }

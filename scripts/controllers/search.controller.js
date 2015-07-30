@@ -1,6 +1,9 @@
-define(['angular',
-  'controllers/module'], function (ng, controllers) {
+define([
+  'angular',
+  'controllers/module'], function (ng) {
+
   'use strict';
+
   ng.module('app.controllers')
     .controller('SearchController', SearchController);
 

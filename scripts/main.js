@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: '/js/',
+    baseUrl: '/scripts/',
     paths: {
         'angular': '../lib/angular/angular',
         'angular-ui-router': '../lib/angular-ui-router/release/angular-ui-router',
