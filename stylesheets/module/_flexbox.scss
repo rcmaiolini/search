@@ -1,0 +1,9 @@
+.flex-boxes {
+  @include clearfix;
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(stretch);
+  @include flex-wrap(wrap);
+  clear: both;
+  text-align: center;
+}

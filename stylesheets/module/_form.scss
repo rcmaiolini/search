@@ -1,0 +1,50 @@
+form.search-bar {
+  position: relative;
+  width: 550px;
+  margin: 20px auto;
+  background-color: #f7f7f7;
+  padding: 40px 85px;
+  border-radius: 20px;
+
+  label {
+    color: $light-blue;
+    font-size: 20px;
+    display: block;
+    border-bottom: 3px solid $base-line;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    text-align: left;
+  }
+
+  input[type=search] {
+    @include appearance(none);
+    @include box-sizing(border-box);
+    @include transition(border-color);
+    background-color: #e3e3e3;
+    border-radius: $base-border-radius;
+    border: 1px solid $base-border-color;
+    display: block;
+    font-size: 1em;
+    font-style: italic;
+    margin: 0 0 10px 0;
+    padding: ($base-spacing / 3) ($base-spacing / 3);
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+  }
+
+  button[type=submit] {
+    @include button(flat, $action-color);
+    @include position(absolute, 0em 0em 0em null);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    outline: none;
+    padding: 5px 10px;
+
+    img {
+      height: 12px;
+      opacity: 0.7;
+    }
+  }
+}

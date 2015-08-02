@@ -1,21 +1,29 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <base href="/"/>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>Search DEVV</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/vendor/normalize.css">
-  <link rel="stylesheet" type="text/css" href="lib/flexboxgrid/dist/flexboxgrid.min.css">
-  <link rel="stylesheet" type="text/css" href="sass/main.css">
-</head>
-<body>
+<html class="no-js" lang="">
+  <head>
+    <base href="/ricardo/"/>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Search Devv</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <header ui-view="header" class="header row line"></header>
+    <link rel="favicon" href="images/favicon.png">
 
-  <div ui-view="content" class="content row"></div>
+    <link rel="stylesheet" href="stylesheets/vendors/normalize/normalize.css">
+    <link rel="stylesheet" href="stylesheets/vendors/normalize/main.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
 
-  <footer ui-view="footer" class="footer row"></footer>
+  </head>
+  <body>
 
-<script src="lib/requirejs/require.js" type="text/javascript" data-main="scripts/main.js"></script>
-</body>
+    <header ui-view="header" class="navigation"></header>
+
+    <div ui-view="content" class="flex-boxes"></div>
+
+    <footer ui-view="footer" class="footer"></footer>
+
+    <script src="lib/requirejs/require.js" type="text/javascript" data-main="scripts/main.js"></script>
+
+  </body>
 </html>

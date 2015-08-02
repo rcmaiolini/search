@@ -1,0 +1,32 @@
+a {
+  color: $footer-link-color;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    color: transparentize($footer-color, 0);
+  }
+}
+
+h3 {
+  color: $footer-color;
+  font-size: 1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 5px 0;
+}
+
+hr {
+  border: 1px solid transparentize($footer-disclaimer-color, 0.3);
+  margin: 0 auto $base-spacing;
+  width: 12em;
+}
+
+p {
+  color: $footer-disclaimer-color;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin: auto;
+  max-width: 35em;
+  text-align: center;
+}
